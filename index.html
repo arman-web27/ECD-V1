@@ -1,0 +1,3304 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./Image/banner.avif"
+      type="image/avif"
+      fetchpriority="high"
+    />
+    <meta name="theme-color" content="#F2F6FF" />
+    <meta
+      name="description"
+      content="EyeCare Drop: त्वचा की नियमित देखभाल के लिए 3-step routine. सही जानकारी और dermatologist की सलाह को प्राथमिकता दें।"
+    />
+    <title>EyeCare Drop | त्वचा की नियमित देखभाल</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg-main: #f2f6ff;
+        --text-main: #142d55;
+        --highlight: #2879e3;
+        --highlight-hover: #1b62bf;
+        --highlight-light: #ebf3fd;
+        --highlight-dim: rgba(40, 121, 227, 0.12);
+        --card-bg: #ffffff;
+        --card-subtle: #e8f0fe;
+        --text-muted: #536b8e;
+        --white: #ffffff;
+        --border-soft: rgba(40, 121, 227, 0.18);
+        --font: "Halant", "Noto Serif Devanagari", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 16px;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg-main);
+        color: var(--text-main);
+        font-family: var(--font);
+        font-size: 19.8px;
+        line-height: 1.55;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .icon {
+        width: 1em;
+        height: 1em;
+        flex: 0 0 auto;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vertical-align: -0.15em;
+      }
+
+      .icon-fill {
+        fill: currentColor;
+        stroke: none;
+      }
+
+      .page-shell > section[aria-labelledby] > h2,
+      .page-shell > section[aria-labelledby] .quality-copy > h2,
+      .page-shell > section[aria-labelledby] .offer-copy > h2 {
+        font-size: 30px;
+        line-height: 1.35;
+        text-align: center;
+        text-wrap: balance;
+        color: var(--text-main);
+      }
+
+      .page-shell > section[aria-labelledby] > .section-lead,
+      .page-shell > section[aria-labelledby] > .kit-subtitle,
+      .page-shell > section[aria-labelledby] > .order-lead,
+      .page-shell > section[aria-labelledby] .quality-kicker,
+      .page-shell > section[aria-labelledby] .offer-label,
+      .page-shell > section[aria-labelledby] .offer-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .page-shell > section[aria-labelledby] > .section-lead,
+      .page-shell > section[aria-labelledby] > .kit-subtitle,
+      .page-shell > section[aria-labelledby] > .order-lead,
+      .page-shell > section[aria-labelledby] .offer-subtitle {
+        font-size: 22px;
+        line-height: 1.4;
+        color: var(--highlight);
+      }
+
+      .quality-copy > p:not(.quality-kicker),
+      .offer-copy > .offer-subtitle {
+        text-align: center;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .page-shell {
+        width: min(100%, 450px);
+        margin-inline: auto;
+        overflow: hidden;
+        background: var(--bg-main);
+        box-shadow:
+          0 10px 40px rgba(20, 45, 85, 0.08),
+          0 0 0 1px var(--border-soft);
+      }
+
+      .section-pad {
+        padding: 16px 12px;
+        position: relative;
+      }
+
+      .topline {
+        height: 60px;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--card-bg);
+        border-bottom: 1px solid var(--border-soft);
+      }
+
+      .wordmark {
+        color: var(--text-main);
+        font-size: 18.7px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+      }
+
+      .wordmark span {
+        color: var(--highlight);
+      }
+
+      .top-cta {
+        color: var(--highlight);
+        font-size: 17.6px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .top-cta span {
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+
+      .top-cta:hover span {
+        transform: translate(3px, -3px);
+      }
+
+      .hero {
+        background: var(--bg-main);
+      }
+
+      .image-cut {
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .image-cut img {
+        transition:
+          transform 0.6s cubic-bezier(0.2, 0.75, 0.25, 1),
+          filter 0.3s ease;
+      }
+
+      .image-cut:hover img {
+        transform: scale(1.045);
+        filter: saturate(1.08);
+      }
+
+      .image-cut-hero {
+        position: relative;
+        height: 245px;
+        clip-path: polygon(0 0, 100% 0, 100% 86%, 85% 100%, 0 93%);
+      }
+
+      .image-cut-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(20, 45, 85, 0.55),
+          transparent 64%
+        );
+        pointer-events: none;
+      }
+
+      .photo-caption {
+        position: absolute;
+        z-index: 1;
+        bottom: 25px;
+        left: 18px;
+        color: var(--white);
+        font-size: 16.5px;
+      }
+
+      .hero-copy {
+        padding-top: 18px;
+      }
+
+      .eyebrow,
+      .product-no,
+      .offer-label {
+        margin: 0;
+        color: var(--highlight);
+        font-size: 14.3px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .eyebrow {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: var(--highlight);
+      }
+
+      .eyebrow-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--highlight);
+        box-shadow: 0 0 0 4px var(--highlight-dim);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin: 12px 0 10px;
+        font-size: clamp(31.9px, 8.8vw, 39.6px);
+        line-height: 1.33;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+
+      .hero-subtitle {
+        margin-bottom: 18px;
+        color: var(--highlight);
+        font-size: 23.1px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .button {
+        min-height: 52px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 18px;
+        font-size: 18.7px;
+        font-weight: 700;
+        line-height: 1.35;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 9px 20px rgba(40, 121, 227, 0.3);
+      }
+
+      .button:active {
+        transform: translateY(1px) scale(0.99);
+        box-shadow: none;
+      }
+
+      .button-primary {
+        background: var(--highlight);
+        color: var(--white);
+        box-shadow: 0 6px 18px rgba(40, 121, 227, 0.28);
+      }
+
+      .button-primary:hover {
+        background: var(--highlight-hover);
+        color: var(--white);
+      }
+
+      .hero-note,
+      .fine-print {
+        margin: 13px 0 0;
+        color: var(--text-muted);
+        font-size: 14.3px;
+        line-height: 1.5;
+      }
+
+      .hero-stamp {
+        position: absolute;
+        right: 23px;
+        top: 235px;
+        width: 64px;
+        height: 64px;
+        border: 1px solid var(--highlight);
+        border-radius: 50%;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        background: var(--card-bg);
+        color: var(--highlight);
+        transform: rotate(10deg);
+        box-shadow: 0 6px 16px rgba(40, 121, 227, 0.2);
+      }
+
+      .hero-stamp span {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+
+      .hero-stamp b {
+        font-size: 25.3px;
+        line-height: 1;
+      }
+
+      .pain {
+        background: #eef5ff;
+        padding: 42px 24px 28px;
+      }
+
+      .pain h2,
+      .ingredients h2,
+      .quality h2,
+      .compare h2,
+      .experience h2,
+      .reviews h2,
+      .offer h2,
+      .final-cta h2,
+      .order h2,
+      .faq h2 {
+        margin-bottom: 12px;
+        font-size: 29.7px;
+        line-height: 1.38;
+        color: var(--text-main);
+      }
+
+      .section-lead {
+        margin-bottom: 20px;
+        color: var(--highlight);
+        font-size: 20.9px;
+        font-weight: 600;
+      }
+
+      .ingredient-redesign { background: linear-gradient(180deg, #f7fbff 0%, #eef6ff 100%); text-align: center; }
+      .ingredient-redesign h2 { margin-bottom: 8px; font-size: 32px; color: var(--text-main); }
+      .ingredient-intro { max-width: 620px; margin: 0 auto 26px; color: var(--text-muted); font-size: 15px; line-height: 1.7; }
+      .ingredient-redesign-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 1000px; margin: 0 auto; }
+      .ingredient-redesign-grid article { overflow: hidden; padding: 0 0 20px; border: 1px solid rgba(40, 121, 227, 0.12); border-radius: 20px; background: var(--card-bg); box-shadow: 0 10px 26px rgba(24, 82, 145, 0.1); text-align: left; transition: transform .25s ease, box-shadow .25s ease; }
+      .ingredient-redesign-grid article:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(24, 82, 145, 0.16); }
+      .ingredient-redesign-grid img { display: block; width: 100%; height: 170px; object-fit: cover; }
+      .ingredient-card-copy { padding: 18px 20px 0; }
+      .ingredient-redesign-grid b { display: inline-grid; width: 30px; height: 30px; margin-bottom: 10px; place-items: center; border-radius: 50%; background: var(--highlight); color: var(--white); font-size: 12px; }
+      .ingredient-redesign-grid strong, .ingredient-redesign-grid span { display: block; }
+      .ingredient-redesign-grid strong { color: var(--text-main); font-size: 18px; }
+      .ingredient-redesign-grid span { margin-top: 4px; color: var(--text-muted); font-size: 14px; }
+      @media (max-width: 700px) { .ingredient-redesign-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .ingredient-redesign-grid img { height: 135px; } .ingredient-card-copy { padding: 14px; } }
+      @media (max-width: 430px) { .ingredient-redesign-grid { grid-template-columns: 1fr; } }
+
+      .pain-list {
+        margin-inline: 0;
+        border-top: 0;
+      }
+
+      .pain-list img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .pain-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding: 8px 0 0;
+      }
+
+      .pain-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        min-height: 0;
+        padding: 14px 12px 16px;
+        background: var(--card-bg);
+        border: 2px dotted #a9c7ed;
+        border-radius: 18px;
+        box-shadow: 0 6px 16px rgba(36, 91, 155, 0.08);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .pain-card img {
+        width: 100%;
+        height: 116px;
+        object-fit: cover;
+        border: 0;
+        border-radius: 12px;
+        transition: transform 0.25s ease;
+      }
+
+      .pain-card h3 {
+        margin: 0;
+        padding: 0;
+        color: var(--text-main);
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: center;
+        text-wrap: balance;
+        transition: color 0.25s ease;
+      }
+
+      .pain-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--highlight);
+        box-shadow: 0 12px 24px rgba(36, 91, 155, 0.16);
+      }
+
+      .pain-card:hover img {
+        transform: scale(1.025);
+      }
+
+      .pain-card:hover h3 {
+        color: var(--highlight);
+      }
+
+      @media (max-width: 380px) {
+        .pain-card-grid {
+          gap: 10px;
+        }
+
+        .pain-card {
+          padding-inline: 8px;
+        }
+
+        .pain-card img {
+          height: 100px;
+        }
+
+        .pain-card h3 {
+          font-size: 14px;
+        }
+      }
+
+      .pain-row {
+        min-height: 77px;
+        display: grid;
+        grid-template-columns: 25px 54px 1fr 18px;
+        gap: 10px;
+        align-items: center;
+        border-bottom: 1px solid var(--border-soft);
+        transition:
+          background 0.2s ease,
+          padding 0.2s ease;
+      }
+
+      .pain-row:hover {
+        padding-inline: 5px;
+        background: var(--highlight-dim);
+      }
+
+      .pain-index {
+        color: var(--highlight);
+        font-size: 13.2px;
+        font-weight: 700;
+      }
+
+      .pain-photo {
+        width: 48px;
+        height: 48px;
+        clip-path: polygon(0 0, 87% 0, 100% 78%, 17% 100%);
+      }
+
+      .pain-row h3 {
+        margin: 0;
+        font-size: 18.7px;
+        line-height: 1.3;
+        color: var(--text-main);
+      }
+
+      .row-arrow {
+        color: var(--highlight);
+        transition: transform 0.2s ease;
+      }
+
+      .pain-row:hover .row-arrow {
+        transform: translate(2px, -2px);
+      }
+
+      .kit {
+        background: var(--card-bg);
+        color: var(--text-main);
+        border-top: 1px solid var(--border-soft);
+        border-bottom: 1px solid var(--border-soft);
+      }
+
+      .kit .product-no {
+        color: var(--highlight);
+      }
+
+      .kit h2 {
+        margin: 12px auto 5px;
+        color: var(--text-main);
+        font-size: 36.3px;
+        line-height: 1.12;
+        text-align: center;
+        text-wrap: balance;
+      }
+
+      .product-intro-visual {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.9fr 1.4fr 0.9fr;
+        align-items: center;
+        gap: 12px;
+        min-height: 250px;
+        margin: 22px 0 20px;
+        padding: 18px;
+        border: 2px dotted #a9c7ed;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #f8fbff, #eaf3ff);
+      }
+
+      .product-intro-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 210px;
+        overflow: hidden;
+        border: 4px solid var(--card-bg);
+        border-radius: 18px;
+        background: #dcecff;
+        box-shadow: 0 10px 22px rgba(20, 45, 85, 0.12);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .product-intro-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 0.5s ease,
+          filter 0.35s ease;
+      }
+
+      .product-intro-visual:hover .product-intro-image {
+        transform: scale(1.045);
+        box-shadow:
+          0 0 0 10px var(--highlight-dim),
+          0 18px 38px rgba(20, 45, 85, 0.18);
+      }
+
+      .product-intro-visual:hover .product-intro-image img {
+        transform: scale(1.08);
+        filter: saturate(1.1);
+      }
+
+      .product-intro-badge {
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        min-height: 58px;
+        padding: 10px 7px;
+        border: 1px solid #b8d1ef;
+        border-radius: 12px;
+        background: var(--white);
+        color: var(--white);
+        color: var(--highlight);
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(20, 45, 85, 0.06);
+      }
+
+      .product-intro-points {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .product-intro-point {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 76px;
+        padding: 28px 10px 10px;
+        border: 1px solid #c9dcf4;
+        border-radius: 16px 6px 16px 6px;
+        background: #ffffff;
+        color: var(--text-main);
+        font-size: 14.5px;
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(20, 45, 85, 0.04);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .product-intro-point::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 50%;
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 20px;
+        transform: translateX(-50%);
+        border-radius: 999px;
+        background: var(--highlight);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .product-intro-point:nth-child(1)::before { content: "01"; }
+      .product-intro-point:nth-child(2)::before { content: "02"; }
+      .product-intro-point:nth-child(3)::before { content: "03"; }
+      .product-intro-point:nth-child(4)::before { content: "04"; }
+
+      .product-intro-point:nth-child(even) {
+        transform: none;
+        border-radius: 16px 6px 16px 6px;
+      }
+
+      .product-intro-point:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(40, 121, 227, 0.14);
+      }
+
+      .product-intro-point:nth-child(even):hover {
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 380px) {
+        .product-intro-visual {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          min-height: 0;
+          padding: 14px;
+        }
+
+        .product-intro-image {
+          grid-row: 1;
+          height: 180px;
+        }
+
+        .product-intro-badge {
+          min-height: 44px;
+        }
+
+        .product-intro-badge:first-of-type {
+          grid-row: 2;
+        }
+
+        .product-intro-badge:last-of-type {
+          grid-row: 3;
+        }
+      }
+
+      .how-it-works {
+        position: relative;
+        padding: 42px 12px 34px;
+        background: #e8f0fe;
+      }
+
+      .how-it-works > h2,
+      .how-it-works > .section-lead {
+        text-align: center;
+      }
+
+      .how-it-works > h2 {
+        margin-bottom: 7px;
+        color: var(--text-main);
+        font-size: 30px;
+        line-height: 1.3;
+      }
+
+      .how-it-works > .section-lead {
+        margin: 0 auto 22px;
+        color: var(--highlight);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .how-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: stretch;
+        min-height: 132px;
+        margin: 0 auto 16px;
+        max-width: 760px;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .how-card:nth-of-type(even) {
+        grid-template-columns: 60% 40%;
+      }
+
+      .how-card:nth-of-type(even) .how-card-image {
+        order: 2;
+      }
+
+      .how-card-image {
+        z-index: 1;
+        min-height: 132px;
+        overflow: hidden;
+        border: 2px solid var(--highlight);
+        border-radius: 13px;
+        box-shadow: 0 7px 0 rgba(40, 121, 227, 0.18);
+      }
+
+      .how-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 0.4s ease,
+          filter 0.4s ease;
+      }
+
+      .how-card:hover .how-card-image img {
+        transform: scale(1.07);
+        filter: saturate(1.1);
+      }
+
+      .how-card-copy {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80px;
+        align-self: center;
+        margin: 0 0 0 24px;
+        padding: 11px 12px;
+        border: 1px solid var(--border-soft);
+        border-radius: 14px;
+        background: #ffffff;
+      }
+
+      .how-card:nth-of-type(even) .how-card-copy {
+        order: -1;
+        margin: 0 24px 0 0;
+      }
+
+      .how-card-number {
+        display: none;
+      }
+
+      .how-card:nth-of-type(even) .how-card-number {
+        display: none;
+      }
+
+      .how-it-works::after {
+        content: "";
+        position: absolute;
+        top: 124px;
+        bottom: 34px;
+        left: 50%;
+        border-left: 3px dashed rgba(40, 121, 227, 0.6);
+        transform: translateX(-50%);
+      }
+
+      .how-it-works > h2,
+      .how-it-works > .section-lead,
+      .how-card {
+        position: relative;
+        z-index: 1;
+      }
+
+      .how-card h3 {
+        margin: 0 0 4px;
+        color: var(--text-main);
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      .how-card p {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+      }
+
+      @media (max-width: 380px) {
+        .how-card,
+        .how-card:nth-of-type(even) {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .how-card-copy {
+          margin-left: 26px;
+          padding: 13px 10px;
+        }
+
+        .how-card:nth-of-type(even) .how-card-copy {
+          margin-right: 26px;
+        }
+
+        .how-card-number {
+          left: calc(-26px - 15px);
+          width: 30px;
+          height: 30px;
+        }
+
+        .how-card:nth-of-type(even) .how-card-number {
+          right: calc(-26px - 15px);
+        }
+
+        .how-card h3 {
+          font-size: 17px;
+        }
+
+        .how-card p {
+          font-size: 14px;
+        }
+      }
+
+      .kit-subtitle {
+        margin-bottom: 17px;
+        color: var(--highlight);
+        font-size: 22px;
+      }
+
+      .kit-intro {
+        margin-bottom: 12px;
+        font-size: 18.7px;
+        color: var(--text-muted);
+      }
+
+      .kit-orbit {
+        position: absolute;
+        right: 19px;
+        top: 35px;
+        width: 73px;
+        height: 73px;
+        display: grid;
+        place-content: center;
+        border: 1px solid var(--highlight);
+        border-radius: 50%;
+        color: var(--highlight);
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 0.9;
+        text-align: center;
+        background: var(--highlight-dim);
+        transform: rotate(9deg);
+      }
+
+      .kit-orbit span {
+        font-size: 9.9px;
+        letter-spacing: 0.12em;
+      }
+
+      .product-stack {
+        display: grid;
+        gap: 12px;
+        margin-top: 21px;
+      }
+
+      .product-row {
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        min-height: 119px;
+        background: var(--card-bg);
+        color: var(--text-main);
+        border: 1px solid var(--border-soft);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(20, 45, 85, 0.05);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .product-row:hover {
+        transform: translateX(5px);
+        border-color: var(--highlight);
+      }
+
+      .product-image {
+        height: 100%;
+        min-height: 119px;
+        clip-path: polygon(0 0, 100% 0, 88% 100%, 0 90%);
+      }
+
+      .product-copy {
+        align-self: center;
+        padding: 11px 12px;
+      }
+
+      .product-no {
+        font-size: 11px;
+      }
+
+      .product-copy h4 {
+        margin: 5px 0 4px;
+        color: var(--highlight);
+        font-size: 17.6px;
+        line-height: 1.2;
+      }
+
+      .product-copy p {
+        margin: 0;
+        font-size: 15.4px;
+        line-height: 1.35;
+        color: var(--text-muted);
+      }
+
+      .ingredients {
+        background-color: #ffffff;
+        background-image: repeating-linear-gradient(
+          135deg,
+          rgba(40, 121, 227, 0.03) 0 1px,
+          transparent 1px 13px
+        );
+      }
+
+      .ingredients h2 {
+        width: min(100%, 350px);
+        margin: 0 auto 14px;
+        padding: 13px 16px 11px;
+        clip-path: polygon(2% 8%, 96% 0, 100% 82%, 92% 95%, 8% 100%, 0 20%);
+        background: var(--highlight);
+        color: var(--white);
+        font-size: 31.9px;
+        line-height: 1.18;
+        text-align: center;
+        text-wrap: balance;
+        box-shadow: 0 6px 20px rgba(40, 121, 227, 0.3);
+      }
+
+      .ingredients h2 span {
+        color: #ebf3fd;
+      }
+
+      .ingredients .section-lead {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto 25px;
+        padding: 6px 16px 4px;
+        background: var(--card-subtle);
+        color: var(--highlight);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        font-size: 18.7px;
+        line-height: 1.35;
+        text-align: center;
+        text-wrap: balance;
+      }
+
+      .ingredient-hero {
+        position: relative;
+        height: 196px;
+        margin: 19px 0 16px;
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 88% 100%, 0 90%);
+      }
+
+      .ingredient-hero::after {
+        content: "";
+        position: absolute;
+        inset: 40% 0 0;
+        background: linear-gradient(0deg, rgba(20, 45, 85, 0.75), transparent);
+      }
+
+      .ingredient-hero span {
+        position: absolute;
+        z-index: 1;
+        bottom: 18px;
+        left: 17px;
+        color: var(--white);
+        font-weight: 600;
+      }
+
+      .ingredient-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 9px 2px 0;
+      }
+
+      .ingredient-item {
+        position: relative;
+        min-width: 0;
+        padding: 12px 8px 14px;
+        border: 1px solid var(--border-soft);
+        border-radius: 38px 38px 29px 29px;
+        background: var(--card-bg);
+        box-shadow: 0 5px 14px rgba(20, 45, 85, 0.05);
+        text-align: center;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .ingredient-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--highlight);
+        box-shadow: 0 10px 24px rgba(40, 121, 227, 0.12);
+      }
+
+      .ingredient-photo {
+        width: 100%;
+        height: 128px;
+        margin: 0 auto 10px;
+        border-radius: 50%;
+        background: var(--bg-main);
+        transition:
+          transform 0.35s ease,
+          filter 0.35s ease;
+      }
+
+      .ingredient-photo img {
+        border-radius: inherit;
+      }
+
+      .ingredient-item > span {
+        display: block;
+        margin-bottom: 6px;
+        border-radius: 999px;
+        background: var(--highlight);
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.65;
+      }
+
+      .ingredient-item p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.35;
+        color: var(--text-muted);
+        text-wrap: balance;
+      }
+
+      .ingredient-item:hover .ingredient-photo {
+        transform: scale(1.035);
+        filter: saturate(1.1);
+      }
+
+      .ingredient-item b {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        width: 34px;
+        height: 34px;
+        transform: translateX(-50%);
+        border: 2px solid var(--card-bg);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--highlight);
+        color: var(--white);
+        font-size: 15.4px;
+        font-weight: 700;
+        box-shadow: 0 3px 8px rgba(40, 121, 227, 0.3);
+      }
+
+      .quality {
+        padding: 38px 20px 32px;
+        background: linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+        color: var(--text-main);
+      }
+
+      .quality-kicker {
+        display: table;
+        margin: 0 auto 12px;
+        padding: 3px 12px;
+        border: 1px solid var(--highlight);
+        border-radius: 999px;
+        background: var(--card-bg);
+        color: var(--highlight);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .quality-copy {
+        padding: 0 2px 24px;
+        text-align: center;
+      }
+
+      .quality h2 {
+        margin-bottom: 10px;
+        font-size: 29.7px;
+        line-height: 1.22;
+        color: var(--text-main);
+      }
+
+      .quality h2 span {
+        display: block;
+        color: var(--highlight);
+      }
+
+      .quality-copy p {
+        max-width: 38ch;
+        margin: 0 auto;
+        color: var(--highlight);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .quality-marks {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        max-width: 620px;
+        margin: 0 auto;
+      }
+
+      .quality-marks span {
+        min-width: 0;
+        aspect-ratio: 1 / 1;
+        min-height: 0;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        align-content: start;
+        justify-items: center;
+        gap: 8px;
+        padding: 18px;
+        border: 1px solid rgba(40, 121, 227, 0.14);
+        border-radius: 20px;
+        background: var(--card-bg);
+        color: var(--text-main);
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(20, 45, 85, 0.05);
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .quality-marks img {
+        width: min(100%, 130px);
+        height: 130px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 4px rgba(20, 45, 85, 0.12));
+      }
+
+      .quality-marks span:hover {
+        transform: translateY(-4px);
+        border-color: var(--highlight);
+        box-shadow: 0 10px 22px rgba(40, 121, 227, 0.12);
+      }
+
+      .quality-marks b {
+        align-self: start;
+        width: 100%;
+        margin-top: 0;
+        padding: 7px 2px;
+        border-radius: 999px;
+        background: var(--highlight) !important;
+        color: var(--white);
+        font-size: 15px;
+        line-height: 1.35;
+      }
+
+      .quality-marks small {
+        display: none;
+      }
+
+      .compare {
+        padding: 38px 20px 34px;
+        background: #ffffff;
+        text-align: center;
+      }
+
+      .compare h2 {
+        margin-bottom: 8px;
+      }
+
+      .compare > .section-lead {
+        margin-bottom: 24px;
+      }
+
+      .comparison-table-wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        overflow-x: auto;
+        border: 1px solid var(--border-soft);
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(20, 45, 85, 0.08);
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: var(--card-bg);
+        color: var(--text-main);
+        text-align: left;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 15px 18px;
+        border-bottom: 1px solid var(--border-soft);
+        font-size: 15px;
+      }
+
+      .comparison-table thead th {
+        background: var(--highlight);
+        color: var(--white);
+        font-size: 16px;
+      }
+
+      .comparison-table thead th:first-child {
+        width: 42%;
+      }
+
+      .compare-product-icon {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        vertical-align: middle;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.8;
+      }
+
+      .comparison-table tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .comparison-table tbody tr:nth-child(even) {
+        background: #f5f9ff;
+      }
+
+      .comparison-table td:first-child {
+        font-weight: 700;
+        color: var(--highlight);
+      }
+
+      .compare-icon {
+        display: inline-grid;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        place-items: center;
+        border-radius: 50%;
+        background: #e8f7ef;
+        color: #16834d;
+        vertical-align: middle;
+      }
+
+      .compare-icon svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.5;
+      }
+
+      .compare-icon.neutral {
+        background: #fff4df;
+        color: #c47b00;
+      }
+
+      @media (max-width: 520px) {
+        .compare {
+          padding-inline: 12px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+          padding: 11px 8px;
+          font-size: 12px;
+          line-height: 1.35;
+        }
+
+        .comparison-table thead th {
+          font-size: 12px;
+        }
+
+        .compare-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+          font-size: 12px;
+        }
+      }
+
+      .offer {
+        max-width: 760px;
+        margin: 28px auto;
+        padding: 38px 24px 32px;
+        border: 1px solid var(--border-soft);
+        border-radius: 24px;
+        background: linear-gradient(135deg, #f7fbff 0%, #e8f2ff 100%);
+        color: var(--text-main);
+        text-align: center;
+        box-shadow: 0 12px 32px rgba(20, 45, 85, 0.1);
+      }
+
+      .offer .offer-perks {
+        display: none;
+      }
+
+      .offer .offer-label {
+        margin-bottom: 8px;
+      }
+
+      .offer .offer-photo {
+        display: none;
+      }
+
+      .offer .offer-copy:last-child {
+        display: flex;
+        justify-content: center;
+      }
+
+      .offer .offer-copy:last-child .button {
+        width: min(100%, 320px);
+      }
+
+      .offer-photo {
+        aspect-ratio: 3 / 2;
+        margin: 0 0 8px;
+        overflow: hidden;
+        border: 1px solid var(--border-soft);
+        border-radius: 12px;
+        background: var(--card-bg);
+        box-shadow: 0 5px 16px rgba(20, 45, 85, 0.06);
+      }
+
+      .offer-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .offer-copy {
+        text-align: center;
+      }
+
+      .offer-label {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto 13px;
+        padding: 8px 18px;
+        border: 1px solid var(--white);
+        border-radius: 999px;
+        background: linear-gradient(100deg, var(--highlight), #1b62bf);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        color: var(--white);
+        font-size: 16.5px;
+        font-weight: 700;
+        box-shadow: 0 5px 15px rgba(40, 121, 227, 0.3);
+      }
+
+      .offer h2 {
+        margin: 0 0 4px;
+        color: var(--text-main);
+        font-size: 30.8px;
+        line-height: 1.15;
+        text-wrap: balance;
+      }
+
+      .offer h2 em {
+        display: block;
+        margin-top: 8px;
+        color: var(--highlight);
+        font-size: 1.25em;
+        font-style: normal;
+      }
+
+      .offer-subtitle {
+        margin: 12px 0 22px;
+        color: var(--text-muted);
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .offer-timer { display: flex; justify-content: center; gap: 10px; margin: 0 auto 22px; }
+      .offer-timer span { min-width: 58px; padding: 8px 6px; border-radius: 10px; background: var(--text-main); color: var(--white); font-size: 22px; font-weight: 800; line-height: 1; }
+      .offer-timer small { display: block; margin-top: 5px; color: #c9dcf7; font-size: 9px; font-weight: 600; letter-spacing: .08em; }
+
+      .offer h2 em {
+        display: block;
+        color: var(--highlight);
+        font-style: normal;
+        font-size: 31.9px;
+      }
+
+      .offer-subtitle {
+        margin-bottom: 0;
+        color: var(--text-muted);
+        font-size: 17.6px;
+        line-height: 1.4;
+      }
+
+      .button-dark {
+        width: 100%;
+        min-height: 56px;
+        border-radius: 999px;
+        background: linear-gradient(100deg, var(--highlight), #1b62bf);
+        color: var(--white);
+        box-shadow: 0 6px 20px rgba(40, 121, 227, 0.35);
+      }
+
+      .button-dark:hover {
+        background: linear-gradient(100deg, #3b88ef, var(--highlight));
+        color: var(--white);
+      }
+
+      .offer .fine-print {
+        margin: 12px 0 0;
+        color: var(--text-muted);
+        font-size: 13.2px;
+        text-align: center;
+      }
+
+      .order {
+        background: var(--bg-main);
+        color: var(--text-main);
+        border-top: 1px solid var(--border-soft);
+      }
+
+      .order h2 {
+        color: var(--text-main);
+        margin-bottom: 3px;
+      }
+
+      .order-lead {
+        margin-bottom: 17px;
+        color: var(--highlight);
+        font-weight: 700;
+      }
+
+      #order-form {
+        display: grid;
+        gap: 8px;
+        padding: 16px;
+        border: 2px solid var(--highlight);
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(20, 45, 85, 0.06);
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      #order-form.is-loading {
+        border-color: var(--highlight);
+        box-shadow: 0 0 0 3px var(--highlight-dim);
+      }
+
+      #order-form label {
+        margin-top: 4px;
+        color: var(--text-main);
+        font-size: 17.6px;
+        font-weight: 700;
+      }
+
+      #order-form label span {
+        color: var(--highlight);
+      }
+
+      #order-form input {
+        width: 100%;
+        min-height: 50px;
+        border: 1px solid var(--border-soft);
+        border-radius: 6px;
+        padding: 10px 12px;
+        background: #fafcff;
+        color: var(--text-main);
+        outline: none;
+        transition:
+          border 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      #order-form textarea {
+        width: 100%;
+        min-height: 92px;
+        resize: vertical;
+        border: 1px solid var(--border-soft);
+        border-radius: 6px;
+        padding: 10px 12px;
+        background: #fafcff;
+        color: var(--text-main);
+        outline: none;
+        font: inherit;
+        transition:
+          border 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      #order-form textarea:focus {
+        border-color: var(--highlight);
+        box-shadow: 0 0 0 3px var(--highlight-dim);
+      }
+      #order-form textarea::placeholder {
+        color: #8499b5;
+      }
+
+      #order-form input:focus {
+        border-color: var(--highlight);
+        box-shadow: 0 0 0 3px var(--highlight-dim);
+      }
+
+      #order-form input::placeholder {
+        color: #8499b5;
+      }
+
+      .phone-field {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        border: 1px solid var(--border-soft);
+        border-radius: 6px;
+        background: #fafcff;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .phone-field:focus-within {
+        border-color: var(--highlight);
+        box-shadow: 0 0 0 3px var(--highlight-dim);
+      }
+
+      .country-code {
+        padding: 0 12px;
+        border-right: 1px solid var(--border-soft);
+        color: var(--highlight);
+        font-weight: 700;
+      }
+
+      #order-form .phone-field input {
+        min-width: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .submit-button {
+        width: 100%;
+        margin-top: 9px;
+      }
+
+      .button-spinner {
+        display: none;
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+      }
+
+      .submit-button.is-loading .button-spinner {
+        display: block;
+      }
+
+      .submit-button.is-loading .button-label {
+        opacity: 0.88;
+      }
+
+      .submit-button.is-loading {
+        background: #1b62bf;
+        cursor: wait;
+      }
+
+      .submit-button:disabled {
+        cursor: wait;
+      }
+
+      .form-loading-overlay {
+        position: fixed;
+        z-index: 1000;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 14px;
+        padding: 24px;
+        background: rgba(242, 246, 255, 0.94);
+        color: var(--text-main);
+        text-align: center;
+      }
+
+      .form-loading-overlay[hidden] {
+        display: none;
+      }
+
+      .form-loading-overlay p {
+        margin: 0;
+        font-size: 24.2px;
+        font-weight: 700;
+      }
+
+      .overlay-spinner {
+        width: 52px;
+        height: 52px;
+        border: 5px solid var(--highlight-dim);
+        border-top-color: var(--highlight);
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+      }
+
+      body.is-form-loading {
+        overflow: hidden;
+      }
+
+      .order-perks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 7px;
+        margin-top: 7px;
+        color: var(--highlight);
+        font-size: 14.3px;
+        font-weight: 700;
+      }
+
+      .order-perks span,
+      .privacy-note,
+      .review-location {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .order-perks .icon {
+        color: var(--highlight);
+      }
+
+      .privacy-note .icon {
+        color: var(--highlight);
+      }
+
+      .privacy-note,
+      .form-status,
+      .form-error {
+        margin: 7px 0 0;
+        font-size: 14.3px;
+        line-height: 1.45;
+      }
+
+      .form-error {
+        color: #dc2626;
+        font-weight: 700;
+      }
+
+      .form-status {
+        color: var(--text-main);
+        font-weight: 700;
+      }
+
+      .privacy-note {
+        color: var(--text-muted);
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .reviews {
+        background: #e8f0fe;
+      }
+
+      .reviews > h2 {
+        margin-bottom: 18px;
+        text-align: center;
+        color: var(--text-main);
+      }
+
+      .review-quote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+        padding: 18px 15px;
+        border: 1px solid var(--border-soft);
+        border-radius: 16px;
+        background: var(--card-bg);
+        box-shadow: 0 4px 16px rgba(20, 45, 85, 0.05);
+        text-align: center;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .review-quote:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(40, 121, 227, 0.12);
+        border-color: var(--highlight);
+      }
+
+      .review-avatar-wrap {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        border: 3px solid var(--highlight);
+        border-radius: 50%;
+        background: var(--card-subtle);
+        color: var(--highlight);
+        font-size: 24.2px;
+        font-weight: 700;
+      }
+
+      .review-avatar {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+      }
+
+      .review-avatar[hidden] {
+        display: none;
+      }
+
+      .review-content {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .review-sample,
+      .review-product {
+        display: none;
+      }
+
+      .review-topline,
+      .review-byline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px 8px;
+      }
+
+      .review-topline {
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+
+      .stars {
+        color: var(--highlight);
+        letter-spacing: 0.02em;
+        font-size: 19.8px;
+        line-height: 1;
+      }
+
+      .stars .icon {
+        width: 0.95em;
+        height: 0.95em;
+        margin-right: 1px;
+        fill: currentColor;
+        stroke: none;
+      }
+
+      .review-quote blockquote {
+        margin: 5px 0 8px;
+        font-size: 15.4px;
+        line-height: 1.42;
+        color: var(--text-main);
+      }
+
+      .review-byline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 3px 10px;
+      }
+
+      .review-byline p {
+        color: var(--text-main);
+        font-weight: 700;
+      }
+
+      .review-quote p {
+        margin: 0;
+        color: var(--highlight);
+        font-size: 15.4px;
+        font-weight: 700;
+      }
+
+      .review-location {
+        color: var(--text-muted);
+        font-size: 12.1px;
+      }
+
+      .faq {
+        background: var(--bg-main);
+      }
+
+      .faq h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--text-main);
+      }
+
+      .faq details {
+        margin: 10px 0;
+        overflow: hidden;
+        border: 1px solid var(--border-soft);
+        border-radius: 13px;
+        background: var(--card-bg);
+        box-shadow: 0 4px 14px rgba(20, 45, 85, 0.04);
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .faq details[open] {
+        border-color: var(--highlight);
+        box-shadow: 0 6px 20px rgba(40, 121, 227, 0.12);
+      }
+
+      .faq summary {
+        position: relative;
+        padding: 16px 42px 16px 16px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: var(--text-main);
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq summary::after {
+        content: "+";
+        position: absolute;
+        right: 15px;
+        top: 11px;
+        color: var(--highlight);
+        font-size: 25.3px;
+        transition: transform 0.2s ease;
+      }
+
+      .faq details[open] summary::after {
+        transform: rotate(45deg);
+      }
+
+      .faq details p {
+        margin: 0;
+        padding: 0 16px 17px;
+        border-top: 1px solid var(--border-soft);
+        padding-top: 12px;
+        font-size: 16px;
+        line-height: 1.55;
+        color: #476182;
+      }
+
+      .disclaimer {
+        padding: 18px 14px 16px;
+        background: #e4edfc;
+        border-top: 1px solid var(--border-soft);
+        color: var(--text-main);
+      }
+
+      .disclaimer > p {
+        max-width: 390px;
+        margin: 0 auto 12px;
+        color: #536b8e;
+        font-size: 9.5px;
+        line-height: 1.45;
+        text-align: center;
+      }
+
+      .policy-links {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border-soft);
+      }
+
+      .policy-link-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1px 5px;
+      }
+
+      .policy-link {
+        padding: 3px 1px;
+        border: 0;
+        background: transparent;
+        color: var(--highlight);
+        font: inherit;
+        font-size: 11px;
+        line-height: 1.25;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        cursor: pointer;
+      }
+
+      .policy-link:hover,
+      .policy-link:focus-visible {
+        color: var(--text-main);
+      }
+
+      .policy-separator {
+        color: var(--border-soft);
+        font-size: 10px;
+        user-select: none;
+      }
+
+      .policy-dialog {
+        width: min(420px, calc(100% - 32px));
+        max-height: min(80vh, 640px);
+        overflow-y: auto;
+        padding: 24px 20px 20px;
+        border: 1px solid var(--highlight);
+        border-radius: 12px;
+        background: var(--card-bg);
+        color: var(--text-main);
+        box-shadow: 0 10px 40px rgba(20, 45, 85, 0.25);
+      }
+
+      .policy-dialog::backdrop {
+        background: rgba(20, 45, 85, 0.5);
+      }
+
+      .policy-dialog h2 {
+        margin: 0 40px 14px 0;
+        color: var(--highlight);
+        font-size: 26.4px;
+        line-height: 1.35;
+      }
+
+      .policy-dialog p {
+        margin: 0 0 12px;
+        font-size: 17.6px;
+        line-height: 1.6;
+        color: #476182;
+      }
+
+      .policy-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        border: 0;
+        background: var(--card-subtle);
+        color: var(--highlight);
+        font-size: 25.3px;
+        line-height: 1;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+
+      .policy-close:hover {
+        background: var(--highlight);
+        color: var(--white);
+      }
+
+      .sticky-cta {
+        position: fixed;
+        z-index: 20;
+        right: 0;
+        bottom: max(12px, env(safe-area-inset-bottom));
+        left: 0;
+        width: min(450px, calc(100% - 20px));
+        margin-inline: auto;
+        padding: 10px 10px 10px 16px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        border: 1px solid var(--border-soft);
+        background: linear-gradient(105deg, #ffffff 0%, #f2f6ff 100%);
+        color: var(--text-main);
+        box-shadow: 0 10px 30px rgba(20, 45, 85, 0.15);
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+          visibility 0s linear 0s;
+        border-radius: 18px;
+      }
+
+      .sticky-cta::before {
+        display: none;
+      }
+
+      .sticky-cta[hidden] {
+        display: grid;
+        opacity: 0;
+        transform: translateY(16px);
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+          visibility 0s linear 0.35s;
+      }
+
+      .visually-hidden-frame {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .sticky-offer {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        line-height: 1.15;
+      }
+
+      .sticky-offer strong {
+        display: none;
+      }
+
+      .sticky-offer span {
+        color: var(--text-main);
+        font-size: 0;
+        font-weight: 700;
+      }
+
+      .sticky-offer span::before {
+        content: "Free Delivery · COD";
+        font-size: 13px;
+      }
+
+      .sticky-button {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 10px 14px;
+        background: linear-gradient(135deg, var(--highlight), #1b62bf);
+        color: #fff;
+        font-size: 15.5px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(40, 121, 227, 0.3);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      .sticky-button {
+        font-size: 0;
+      }
+
+      .sticky-button::before {
+        content: "Order Now";
+        font-size: 15.5px;
+      }
+
+      .sticky-button:hover {
+        transform: translateY(-2px);
+        filter: saturate(1.1);
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(40, 121, 227, 0.35);
+      }
+
+      @media (max-width: 360px) {
+        .section-pad {
+          padding-inline: 18px;
+        }
+
+        .pain-list {
+          margin-inline: -18px;
+        }
+
+        .topline {
+          padding-inline: 18px;
+        }
+
+        h1 {
+          font-size: 30.8px;
+        }
+
+        .pain-row {
+          grid-template-columns: 22px 46px 1fr 14px;
+          gap: 7px;
+        }
+
+        .pain-photo {
+          width: 42px;
+          height: 42px;
+        }
+
+        .pain-row h3 {
+          font-size: 16.5px;
+        }
+
+        .product-row {
+          grid-template-columns: 96px 1fr;
+        }
+
+        .quality-copy {
+          padding-inline: 18px;
+        }
+
+        .quality > .fine-print {
+          padding-inline: 18px;
+        }
+
+        .offer-photo,
+        .review-banner {
+          margin-inline: -18px;
+        }
+
+        .review-banner {
+          margin-top: -38px;
+        }
+
+        .final-image {
+          margin-right: -18px;
+        }
+
+        .sticky-cta {
+          gap: 6px;
+          padding: 8px 8px 8px 13px;
+          border-radius: 15px;
+        }
+
+        .sticky-button {
+          padding-inline: 10px;
+          font-size: 14.2px;
+        }
+
+        .sticky-offer span {
+          font-size: 12px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <symbol id="icon-gift" viewBox="0 0 24 24">
+        <path
+          d="M20 12v9H4v-9M2 7h20v5H2zM12 7v14M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5C10 6 12 7 12 7Zm0 0h4.5A2.5 2.5 0 1 0 14 4.5C14 6 12 7 12 7Z"
+        />
+      </symbol>
+      <symbol id="icon-truck" viewBox="0 0 24 24">
+        <path d="M3 6h11v12H3zM14 10h4l3 3v5h-7z" />
+        <circle cx="7.5" cy="18" r="1.5" />
+        <circle cx="18" cy="18" r="1.5" />
+        <path d="M14 13h7" />
+      </symbol>
+      <symbol id="icon-clipboard" viewBox="0 0 24 24">
+        <path d="M9 4H5v17h14V4h-4M9 3h6v4H9zM8 12h8M8 16h8" />
+      </symbol>
+      <symbol id="icon-package" viewBox="0 0 24 24">
+        <path
+          d="m12 3 9 5-9 5-9-5 9-5ZM3 8v10l9 5 9-5V8M12 13v10M7.5 5.5l9 5"
+        />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="4" y="10" width="16" height="11" rx="2" />
+        <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7" />
+      </symbol>
+      <symbol id="icon-cart" viewBox="0 0 24 24">
+        <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 8H6" />
+        <circle cx="10" cy="21" r="1" />
+        <circle cx="18" cy="21" r="1" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path
+          d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2-4.6-4.4 6.3-.9L12 2.8Z"
+        />
+      </symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="icon-shield-check" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+    </svg>
+    <main class="page-shell">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img
+          src="./Image/banner.avif"
+          alt="EyeCare Drop Hero Image"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          width="450"
+          height="245"
+        />
+      </section>
+
+      <section class="pain" id="pain" aria-labelledby="pain-title">
+        <h2 id="pain-title">समस्या को समझें</h2>
+        <p class="section-lead">आँखों में होने वाली आम परेशानियाँ</p>
+        <div class="pain-list">
+          <div class="pain-card-grid">
+            <article class="pain-card">
+              <img
+                src="./Image/problem1.avif"
+                alt="Card image 1"
+                loading="lazy"
+              />
+              <h3>आँखों में लालिमा और जलन</h3>
+            </article>
+            <article class="pain-card">
+              <img
+                src="./Image/problem2.avif"
+                alt="Card image 2"
+                loading="lazy"
+              />
+              <h3>सूखापन और किरकिरापन</h3>
+            </article>
+            <article class="pain-card">
+              <img
+                src="./Image/problem3.avif"
+                alt="Card image 3"
+                loading="lazy"
+              />
+              <h3>स्क्रीन से आँखों में थकान</h3>
+            </article>
+            <article class="pain-card">
+              <img
+                src="./Image/problem4.avif"
+                alt="Card image 4"
+                loading="lazy"
+              />
+              <h3>आँखों से पानी आना</h3>
+            </article>
+            <article class="pain-card">
+              <img
+                src="./Image/problem5.avif"
+                alt="Card image 5"
+                loading="lazy"
+              />
+              <h3>धूल से आँखों में परेशानी</h3>
+            </article>
+            <article class="pain-card">
+              <img
+                src="./Image/problem6.avif"
+                alt="Card image 6"
+                loading="lazy"
+              />
+              <h3>आँखों में भारीपन</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="kit section-pad" aria-labelledby="kit-title">
+        <h2 id="kit-title">EyeCare Drop</h2>
+        <h3 class="kit-subtitle">
+          आपकी आँखों की देखभाल के लिए Ayurvedic Solution
+        </h3>
+        <div class="product-intro-visual">
+          <div class="product-intro-badge">100%<br />Herbal</div>
+          <div class="product-intro-image">
+            <img
+              src="Image/product.avif"
+              alt="EyeCare Drop product kit"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-intro-badge">Daily<br />Care</div>
+        </div>
+        <div class="product-intro-points" aria-label="Product highlights">
+          <div class="product-intro-point">7 हर्ब्स का मिश्रण</div>
+          <div class="product-intro-point">10ml ड्रॉप्स पैक</div>
+          <div class="product-intro-point">हर्बल आई केयर फॉर्मूला</div>
+          <div class="product-intro-point">आसान उपयोग</div>
+        </div>
+      </section>
+
+      <section class="how-it-works" aria-labelledby="how-it-works-title">
+        <h2 id="how-it-works-title">How EyeCare Work</h2>
+        <p class="section-lead">आँखों की देखभाल के लिए सही विकल्प</p>
+
+        <article class="how-card">
+          <div class="how-card-image">
+            <img
+              src="./Image/work1.avif"
+              alt="Screen Fatigue"
+              loading="lazy"
+            />
+          </div>
+          <div class="how-card-copy">
+            <span class="how-card-number">01</span>
+            <h3>Screen Fatigue</h3>
+            <p>लंबे समय तक स्क्रीन देखने से होने वाली आँखों की थकान में राहत देने में सहायक।</p>
+          </div>
+        </article>
+        <article class="how-card">
+          <div class="how-card-image">
+            <img
+              src="./Image/work2.avif"
+              alt="Eye Comfort"
+              loading="lazy"
+            />
+          </div>
+          <div class="how-card-copy">
+            <span class="how-card-number">02</span>
+            <h3>Eye Comfort</h3>
+            <p>आँखों में रूखापन, जलन और चुभन से राहत देने में सहायक।</p>
+          </div>
+        </article>
+        <article class="how-card">
+          <div class="how-card-image">
+            <img
+              src="./Image/work3.avif"
+              alt="Dust & Pollution Care"
+              loading="lazy"
+            />
+          </div>
+          <div class="how-card-copy">
+            <span class="how-card-number">03</span>
+            <h3>Dust & Pollution Care</h3>
+            <p>
+              धूल-मिट्टी और प्रदूषण से होने वाली आँखों की जलन व असहजता में राहत के लिए उचित देखभाल।
+            </p>
+          </div>
+        </article>
+        <article class="how-card">
+          <div class="how-card-image">
+            <img
+              src="./Image/work4.avif"
+              alt="Healthy Eye Routine"
+              loading="lazy"
+            />
+          </div>
+          <div class="how-card-copy">
+            <span class="how-card-number">04</span>
+            <h3>Healthy Eye Routine</h3>
+            <p>
+              रोज़ाना आँखों की देखभाल के लिए आसान हर्बल रूटीन।
+            </p>
+          </div>
+        </article>
+      </section>
+
+    
+
+      <section class="ingredient-redesign section-pad" aria-labelledby="ingredient-redesign-title">
+        <h2 id="ingredient-redesign-title">Ingredients</h2>
+        <p class="section-lead">7 पारंपरिक Ayurvedic Herbs</p>
+        <p class="ingredient-intro">EyeCare Drop में शामिल सात हर्बल सामग्री:</p>
+        <div class="ingredient-redesign-grid">
+          <article><img src="./Image/ing1.avif" alt="Bhringraj herb" loading="lazy" /><div class="ingredient-card-copy"><b>01</b><strong>Bhringraj</strong></div></article>
+          <article><img src="./Image/ing2.avif" alt="Gulab Phool" loading="lazy" /><div class="ingredient-card-copy"><b>02</b><strong>Gulab Phool</strong></div></article>
+          <article><img src="./Image/ing3.avif" alt="Daruhaldi herb" loading="lazy" /><div class="ingredient-card-copy"><b>03</b><strong>Daruhaldi</strong></div></article>
+          <article><img src="./Image/ing4.avif" alt="Tulsi leaves" loading="lazy" /><div class="ingredient-card-copy"><b>04</b><strong>Tulsi</strong></div></article>
+          <article><img src="./Image/ing5.avif" alt="Punarnava herb" loading="lazy" /><div class="ingredient-card-copy"><b>05</b><strong>Punarnava</strong></div></article>
+          <article><img src="./Image/ing6.avif" alt="Neem leaves" loading="lazy" /><div class="ingredient-card-copy"><b>06</b><strong>Neem</strong></div></article>
+        </div>
+      </section>
+
+      <section class="quality section-pad" aria-labelledby="quality-title">
+        <div class="quality-copy">
+          <h2 id="quality-title">गुणवत्ता</h2>
+          <p>गुणवत्ता और सामग्री की जानकारी साफ़-साफ़</p>
+        </div>
+        <div class="quality-marks" aria-label="दिए गए quality indicators">
+          <span class="mark-gmp"
+            ><img
+              src="./Image/cert4.avif"
+              alt="GMP certificate"
+              loading="lazy"
+            /><b>GMP</b></span
+          >
+          <span class="mark-iso"
+            ><img
+              src="./Image/cert1.avif"
+              alt="ISO certificate"
+              loading="lazy"
+            /><b>ISO</b></span
+          >
+          <span class="mark-fssai"
+            ><img
+              src="./Image/cert2.avif"
+              alt="FSSAI certificate"
+              loading="lazy"
+            /><b>FSSAI</b></span
+          >
+          <span class="mark-lab"
+            ><img
+              src="./Image/cert3.avif"
+              alt="Lab tested certificate"
+              loading="lazy"
+            /><b>LAB TESTED</b></span
+          >
+        </div>
+      </section>
+
+      <section class="compare section-pad" aria-labelledby="compare-title">
+        <h2 id="compare-title">Product Comparison</h2>
+        <p class="section-lead">EyeCare Drop को करीब से जानें</p>
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th><svg class="compare-product-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C13 8 8 13 8 19a8 8 0 0 0 16 0c0-6-5-11-8-16Z" /><path d="M12 20c.5 2 1.8 3 4 3" /></svg>EyeCare Drop</th>
+                <th>Other EyeCare Products</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="compare-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 4C10 4 5 9 5 18c5 1 10-1 12-5 1.4-2.5 1.8-5.8 2-9Z" /><path d="M5 18c3-4 6-6 11-8" /></svg></span>7 Ayurvedic Herbs</td><td><span class="compare-icon neutral" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18" /></svg></span>Ingredients vary</td></tr>
+              <tr><td><span class="compare-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 4h6" /><path d="M10 4v3l-3 4v7a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-7l-3-4V4" /><path d="M8 14h8" /></svg></span>Convenient 10ml Pack</td><td><span class="compare-icon neutral" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 5h10v14H7zM4 8h3M17 8h3" /></svg></span>Different pack sizes</td></tr>
+              <tr><td><span class="compare-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-4 7a3 3 0 0 0 2.6 4.5h6.8A3 3 0 0 0 18 16l-4-7V3" /><path d="M8 15h8" /><path d="M12 13c1.5-2 3.5-2 4-1-1 1.8-2.4 2.5-4 2" /></svg></span>Herbal Formulation</td><td><span class="compare-icon neutral" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19" /></svg></span>Formulas vary</td></tr>
+              <tr><td><span class="compare-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 5h10v15H7z" /><path d="M10 5V3h4v2M9 9h6M9 13h6M9 17h4" /></svg></span>Easy-to-Carry Bottle</td><td><span class="compare-icon neutral" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM8 7V4h8v3" /><path d="M8 12h8" /></svg></span>Packaging varies</td></tr>
+              <tr><td><span class="compare-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z" /><path d="M15 3v4h4M9 12h6M9 16h6" /></svg></span>Clear Usage Instructions</td><td><span class="compare-icon neutral" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" /><circle cx="12" cy="12" r="9" /></svg></span>Check product label</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="offer section-pad" aria-labelledby="offer-title">
+        <div class="offer-copy">
+          <p class="offer-label">
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-gift"></use></svg
+            >🎁 Combo Pack Special Offer
+          </p>
+          <h2 id="offer-title">₹2500 <em>₹2250 Only</em></h2>
+          <p class="offer-subtitle">Limited Time Offer — Get 10% OFF!</p>
+          <div class="offer-timer" aria-label="Offer ends in">
+            <span><b id="offer-hours">00</b><small>HOURS</small></span>
+            <span><b id="offer-minutes">15</b><small>MINUTES</small></span>
+            <span><b id="offer-seconds">00</b><small>SECONDS</small></span>
+          </div>
+        </div>
+        <div class="offer-copy">
+          <div class="offer-perks">
+            <article class="offer-perk">
+              <span class="offer-perk-icon"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-gift"></use></svg></span
+              ><strong>10% OFF</strong><small>Combo Pack Savings</small>
+            </article>
+            <article class="offer-perk">
+              <span class="offer-perk-icon"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-truck"></use></svg></span
+              ><strong>Free Delivery</strong><small>फ्री डिलीवरी</small>
+            </article>
+            <article class="offer-perk">
+              <span class="offer-perk-icon"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-clipboard"></use></svg></span
+              ><strong>Free Diet Chart</strong><small>फ्री डाइट चार्ट</small>
+            </article>
+            <article class="offer-perk">
+              <span class="offer-perk-icon"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-package"></use></svg></span
+              ><strong>Cash on Delivery</strong><small>कैश ऑन डिलीवरी</small>
+            </article>
+            <article class="offer-perk">
+              <span class="offer-perk-icon"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-lock"></use></svg></span
+              ><span class="offer-perk-copy"
+                ><strong>Secure Order Process</strong
+                ><small>आपकी जानकारी सुरक्षित रखी जाती है</small></span
+              >
+            </article>
+          </div>
+
+          <a class="button button-dark" href="#order"
+            ><svg class="icon" aria-hidden="true">
+              <use href="#icon-cart"></use></svg
+            >अभी अपना Order Book करें<svg class="icon" aria-hidden="true">
+              <use href="#icon-arrow-right"></use></svg
+          ></a>
+        </div>
+      </section>
+
+      <section
+        class="order section-pad"
+        id="order"
+        aria-labelledby="order-title"
+      >
+        <h2 id="order-title">
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-cart"></use>
+          </svg>
+          अपना EyeCare Drop ऑर्डर करें
+        </h2>
+        <p class="order-lead">सिर्फ 2 जानकारी भरें</p>
+
+        <form
+          id="order-form"
+          method="post"
+          target="order-response-frame"
+          novalidate
+        >
+          <label for="customer-name">आपका नाम <span>*</span></label>
+          <input
+            id="customer-name"
+            name="name"
+            type="text"
+            placeholder="अपना नाम दर्ज करें"
+            autocomplete="name"
+            required
+          />
+          <label for="customer-phone">मोबाइल नंबर (+91) <span>*</span></label>
+          <div class="phone-field">
+            <span class="country-code" aria-hidden="true">+91</span>
+            <input
+              id="customer-phone"
+              name="phone"
+              type="tel"
+              inputmode="numeric"
+              placeholder="10 Digit Mobile Number"
+              autocomplete="tel-national"
+              maxlength="10"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
+          <label hidden for="delivery-address"
+            >Complete Delivery Address <span>*</span></label
+          >
+          <textarea hidden
+            id="delivery-address"
+            name="address"
+            placeholder="House/Flat No., Street, Area, City, State"
+            autocomplete="street-address"
+          ></textarea>
+          <label hidden for="pin-code">PIN Code <span>*</span></label>
+          <input hidden
+            id="pin-code"
+            name="pin_code"
+            type="text"
+            inputmode="numeric"
+            placeholder="6 Digit PIN Code"
+            autocomplete="postal-code"
+            maxlength="6"
+            pattern="[0-9]{6}"
+          />
+          <input type="hidden" name="request_id" id="request-id" />
+          <input type="hidden" name="utm_source" />
+          <input type="hidden" name="utm_medium" />
+          <input type="hidden" name="utm_campaign" />
+          <input type="hidden" name="utm_campaign_id" />
+          <input type="hidden" name="utm_adset" />
+          <input type="hidden" name="utm_adset_id" />
+          <input type="hidden" name="utm_ad" />
+          <input type="hidden" name="utm_ad_id" />
+          <input type="hidden" name="utm_content" />
+          <input type="hidden" name="utm_term" />
+          <input type="hidden" name="utm_placement" />
+          <input type="hidden" name="device_platform" />
+          <input type="hidden" name="fbclid" />
+          <input type="hidden" name="fbc" />
+          <input type="hidden" name="fbp" />
+          <input type="hidden" name="landing_page" />
+          <input type="hidden" name="referrer" />
+          <button class="button button-primary submit-button" type="submit">
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-cart"></use></svg
+            ><span class="button-label">मेरा Order Book करें</span
+            ><span class="button-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <div class="order-perks">
+            <span
+              ><svg class="icon" aria-hidden="true">
+                <use href="#icon-check"></use></svg
+              >COD Available</span
+            ><span
+              ><svg class="icon" aria-hidden="true">
+                <use href="#icon-check"></use></svg
+              >Home Delivery</span
+            ><span
+              ><svg class="icon" aria-hidden="true">
+                <use href="#icon-check"></use></svg
+              >10% OFF</span
+            >
+          </div>
+          <p
+            class="form-status"
+            id="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+
+      <section class="reviews section-pad" aria-labelledby="reviews-title">
+        <h2 id="reviews-title">हमारे ग्राहकों का अनुभव</h2>
+
+        <article class="review-quote">
+          <div class="review-avatar-wrap">
+            <span aria-hidden="true">NS</span
+            ><img
+              class="review-avatar"
+              src="./Image/test1.avif"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="review-content">
+            <div class="review-topline">
+              <div
+                class="stars"
+                role="img"
+                aria-label="Sample five-star rating"
+              >
+                <svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg>
+              </div>
+              <span class="review-sample">Sample review</span>
+            </div>
+            <blockquote>
+              “मुझे आँखों में रूखापन, चुभन और लंबे समय तक मोबाइल देखने पर थकान महसूस होती थी। इस वजह से मैं काफी परेशान रहती थी। मैंने आँखों की देखभाल के लिए  EyeCare Drop इस्तेमाल करने के बाद मुझे पहले से बेहतर महसूस हुआ।”
+            </blockquote>
+            <div class="review-byline">
+              <p>Jyoti Kumari</p>
+              <span class="review-location"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-pin"></use></svg
+                >Mathura</span
+              >
+            </div>
+            <small class="review-product">EyeCare Drop</small>
+          </div>
+        </article>
+        <article class="review-quote">
+          <div class="review-avatar-wrap">
+            <span aria-hidden="true">RK</span
+            ><img
+              class="review-avatar"
+              src="./Image/test2.avif"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="review-content">
+            <div class="review-topline">
+              <div
+                class="stars"
+                role="img"
+                aria-label="Sample five-star rating"
+              >
+                <svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg>
+              </div>
+              <span class="review-sample">Sample review</span>
+            </div>
+            <blockquote>
+              “मेरी आँखों में जलन और भारीपन महसूस होता था, खासकर दिनभर काम करने के बाद। EyeCare Drop को 20–25 दिनों तक इस्तेमाल करने के बाद मुझे पहले से बेहतर महसूस हुआ।”
+            </blockquote>
+            <div class="review-byline">
+              <p>Vijay Kumar</p>
+              <span class="review-location"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-pin"></use></svg
+                >Indore</span
+              >
+            </div>
+            <small class="review-product">EyeCare Drop</small>
+          </div>
+        </article>
+        <article class="review-quote">
+          <div class="review-avatar-wrap">
+            <span aria-hidden="true">PV</span
+            ><img
+              class="review-avatar"
+              src="./Image/test3.avif"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="review-content">
+            <div class="review-topline">
+              <div
+                class="stars"
+                role="img"
+                aria-label="Sample five-star rating"
+              >
+                <svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg
+                ><svg class="icon"><use href="#icon-star"></use></svg>
+              </div>
+              <span class="review-sample">Sample review</span>
+            </div>
+            <blockquote>
+              “रास्ते की धूल और प्रदूषण के कारण मेरी आँखों में जलन और परेशानी होने लगती थी। EyeCare Drop इस्तेमाल करने के बाद मुझे काफी राहत महसूस हुई।”
+            </blockquote>
+            <div class="review-byline">
+              <p>Mamta Patel</p>
+              <span class="review-location"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#icon-pin"></use></svg
+                >Lucknow</span
+              >
+            </div>
+            <small class="review-product">EyeCare Drop</small>
+          </div>
+        </article>
+        
+      </section>
+
+      <section class="faq section-pad" aria-labelledby="faq-title">
+        <h2 id="faq-title">अक्सर पूछे जाने वाले सवाल</h2>
+        <details>
+          <summary>1. EyeCare Drop क्या है?</summary>
+          <p>
+            EyeCare Drop आँखों की देखभाल के लिए प्रस्तुत एक हर्बल प्रोडक्ट है।
+          </p>
+        </details>
+        <details>
+          <summary>2. EyeCare Drop में कौन-कौन से ingredients हैं?</summary>
+          <p>
+            EyeCare Drop में 7 पारंपरिक Ayurvedic Herbs शामिल हैं, Bhringraj, Gulab Phool, Daruhaldi, Tulsi, Punarnava, Neem और अन्य हर्बल सामग्री।
+          </p>
+        </details>
+        <details>
+          <summary>3. EyeCare Drop आँखों के रूखेपन और जलन में मदद करता है?</summary>
+          <p>
+            हाँ, EyeCare Drop आँखों के रूखेपन, जलन और चुभन में राहत देने में सहायक है।
+          </p>
+        </details>
+        <details>
+          <summary>4. कितने दिनों में result दिखाई देगा?</summary>
+          <p>
+            आमतौर पर, नियमित उपयोग से 20–25 दिनों में सुधार दिखाई देता है।
+          </p>
+        </details>
+        <details>
+          <summary>5. क्या COD available है?</summary>
+          <p>
+            हाँ, Cash on Delivery available है, subject to delivery location and
+            order availability.
+          </p>
+        </details>
+      </section>
+
+      <footer class="disclaimer section-pad">
+        <p>
+          Disclaimer: This product is intended for general eyecare support. Results may vary from person to person. It is not intended to diagnose, treat, cure, or prevent any disease. Please read the product label and follow the recommended usage. Consult a qualified eye-care professional for persistent or serious eye concerns. Use in the eyes only if the product is specifically formulated and labelled for ophthalmic use.
+        </p>
+        <nav class="policy-links" aria-label="Policies and support">
+          <div class="policy-link-row">
+            <button class="policy-link" type="button" data-policy="privacy">
+              Privacy Policy
+            </button>
+            <span class="policy-separator" aria-hidden="true">|</span>
+            <button class="policy-link" type="button" data-policy="terms">
+              Terms &amp; Conditions
+            </button>
+            <span class="policy-separator" aria-hidden="true">|</span>
+            <button class="policy-link" type="button" data-policy="shipping">
+              Shipping Policy
+            </button>
+            <span class="policy-separator" aria-hidden="true">|</span>
+            <button
+              class="policy-link"
+              type="button"
+              data-policy="cancellation"
+            >
+              Cancellation Policy
+            </button>
+            <span class="policy-separator" aria-hidden="true">|</span>
+            <button class="policy-link" type="button" data-policy="contact">
+              Contact Us
+            </button>
+            <span class="policy-separator" aria-hidden="true">|</span>
+            <button class="policy-link" type="button" data-policy="disclaimer">
+              Legal Disclaimer
+            </button>
+          </div>
+        </nav>
+      </footer>
+    </main>
+    <dialog
+      class="policy-dialog"
+      id="policy-dialog"
+      aria-labelledby="policy-dialog-title"
+    >
+      <form method="dialog">
+        <button class="policy-close" type="submit" aria-label="Close policy">
+          <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+        </button>
+      </form>
+      <h2 id="policy-dialog-title"></h2>
+      <div id="policy-dialog-content"></div>
+    </dialog>
+    <aside
+      class="sticky-cta"
+      id="sticky-cta"
+      aria-label="EyeCare Drop offer"
+      hidden
+    >
+      <div class="sticky-offer">
+        <strong>33% OFF</strong><span>Free Delivery · COD</span>
+      </div>
+      <a class="sticky-button" href="#order"
+        >अभी Order करें<svg class="icon" aria-hidden="true">
+          <use href="#icon-arrow-right"></use></svg
+      ></a>
+    </aside>
+    <iframe
+      name="order-response-frame"
+      id="order-response-frame"
+      title="Order submission response"
+      class="visually-hidden-frame"
+    ></iframe>
+    <div
+      class="form-loading-overlay"
+      id="form-loading-overlay"
+      role="status"
+      aria-live="assertive"
+      hidden
+    >
+      <span class="overlay-spinner" aria-hidden="true"></span>
+      <p>आपका order भेजा जा रहा है…</p>
+    </div>
+    <script>
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault(),
+      );
+      document.addEventListener(
+        "wheel",
+        (event) => {
+          if (event.ctrlKey) event.preventDefault();
+        },
+        { passive: false },
+      );
+      document.addEventListener("keydown", (event) => {
+        if (
+          (event.ctrlKey || event.metaKey) &&
+          ["+", "=", "-", "0", "_"].includes(event.key)
+        ) {
+          event.preventDefault();
+        }
+      });
+
+      const GOOGLE_APPS_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbzla531K40Mhx3ffb0z80aQe31ufq_2UNHu4cc1QBe0-684cGyDTpZhDRrihfr8SmJggA/exec";
+      const UTM_KEYS = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_campaign_id",
+        "utm_adset",
+        "utm_adset_id",
+        "utm_ad",
+        "utm_ad_id",
+        "utm_content",
+        "utm_term",
+        "utm_placement",
+        "device_platform",
+      ];
+      const ATTRIBUTION_KEY = "dermocare_attribution_v1";
+      const form = document.querySelector("#order-form");
+      const nameInput = document.querySelector("#customer-name");
+      const phoneInput = document.querySelector("#customer-phone");
+      const addressInput = document.querySelector("#delivery-address");
+      const pinInput = document.querySelector("#pin-code");
+      const errorMessage = document.querySelector("#form-error");
+      const statusMessage = document.querySelector("#form-status");
+      const submitButton = form.querySelector("button[type='submit']");
+      const submitLabel = submitButton.querySelector(".button-label");
+      const responseFrame = document.querySelector("#order-response-frame");
+      const loadingOverlay = document.querySelector("#form-loading-overlay");
+      const policyDialog = document.querySelector("#policy-dialog");
+      const policyDialogTitle = document.querySelector("#policy-dialog-title");
+      const policyDialogContent = document.querySelector(
+        "#policy-dialog-content",
+      );
+      let pendingRequestId = "";
+
+      const POLICY_CONTENT = {
+        privacy: {
+          title: "Privacy Policy",
+          paragraphs: [
+            "Order request के लिए form आपका नाम और mobile number लेता है। Page URL, referrer और ad attribution details भी request के साथ भेजे जा सकते हैं।",
+            "इस जानकारी का उद्देश्य order processing और confirmation है। Publish करने से पहले अपने actual data access, retention और support-contact details के अनुसार इस policy की समीक्षा करें।",
+          ],
+        },
+        terms: {
+          title: "Terms & Conditions",
+          paragraphs: [
+            "EyeCare Drop को आँखों की देखभाल के लिए प्रस्तुत किया गया है; इसे किसी भी eye disease के इलाज या guaranteed treatment के रूप में न समझें।",
+            "प्रोडक्ट को packaging/label पर दिए गए निर्देशों के अनुसार ही इस्तेमाल करें। आँखों में जलन, रूखापन या अन्य परेशानी होने पर सही कारण जानने और उचित उपचार के लिए नेत्र विशेषज्ञ से सलाह लें।",
+          ],
+        },
+        shipping: {
+          title: "Shipping Policy",
+          paragraphs: [
+            "Home delivery और Cash on Delivery की उपलब्धता delivery location और order availability पर निर्भर करती है।",
+            "Free delivery या promotional offer की लागू शर्तें order confirmation के समय जाँचें। इस page पर किसी निश्चित delivery timeline की guarantee नहीं दी जाती।",
+          ],
+        },
+        cancellation: {
+          title: "Cancellation Policy",
+          paragraphs: [
+            "Order cancel या update करने के लिए confirmation के बाद हमारी team से संपर्क करें।",
+            "Cancellation की उपलब्धता order की processing और dispatch स्थिति पर निर्भर करेगी। लागू eligibility की पुष्टि team से करें।",
+          ],
+        },
+        contact: {
+          title: "Contact Us",
+          paragraphs: [
+            "Order confirmation के लिए हमारी team आपसे संपर्क करेगी। Order से जुड़ी सहायता के लिए confirmation message या product packaging पर दिए गए EyeCare Drop support details का उपयोग करें।",
+          ],
+        },
+        disclaimer: {
+          title: "Legal Disclaimer",
+          paragraphs: [
+            "EyeCare Drop को किसी भी eye disease के cure, guaranteed treatment या guaranteed recovery के रूप में प्रस्तुत नहीं किया जाना चाहिए।",
+            "आँखों में जलन, रूखापन या अन्य समस्याओं के कई संभावित कारण हो सकते हैं। सही diagnosis और उपयुक्त treatment के लिए नेत्र विशेषज्ञ से सलाह लें। किसी निश्चित समय में परिणाम मिलने की guarantee नहीं दी जा सकती।",
+          ],
+        },
+      };
+
+      document.querySelectorAll("[data-policy]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const policy = POLICY_CONTENT[button.dataset.policy];
+          if (!policy) return;
+          policyDialogTitle.textContent = policy.title;
+          policyDialogContent.replaceChildren(
+            ...policy.paragraphs.map((text) => {
+              const paragraph = document.createElement("p");
+              paragraph.textContent = text;
+              return paragraph;
+            }),
+          );
+          policyDialog.showModal();
+        });
+      });
+
+      policyDialog.addEventListener("click", (event) => {
+        if (event.target === policyDialog) policyDialog.close();
+      });
+      let responseTimeout;
+
+      function readStoredAttribution() {
+        try {
+          return JSON.parse(sessionStorage.getItem(ATTRIBUTION_KEY) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      function setHidden(name, value) {
+        const field = form.elements.namedItem(name);
+        if (field) field.value = value || "";
+      }
+
+      function cookie(name) {
+        const match = document.cookie.match(
+          new RegExp("(?:^|;\\s*)" + name + "=([^;]*)"),
+        );
+        if (!match) return "";
+        try {
+          return decodeURIComponent(match[1]);
+        } catch {
+          return match[1];
+        }
+      }
+
+      function capture() {
+        const params = new URLSearchParams(window.location.search);
+        const attribution = readStoredAttribution();
+
+        UTM_KEYS.forEach((key) => {
+          const value = params.get(key) || attribution[key] || "";
+          setHidden(key, value);
+          if (params.get(key)) attribution[key] = params.get(key);
+        });
+
+        try {
+          sessionStorage.setItem(ATTRIBUTION_KEY, JSON.stringify(attribution));
+        } catch {
+          // Continue without cross-page attribution persistence when storage is unavailable.
+        }
+
+        const fbclid = params.get("fbclid") || "";
+        setHidden("fbclid", fbclid);
+        setHidden(
+          "fbc",
+          cookie("_fbc") || (fbclid ? `fb.1.${Date.now()}.${fbclid}` : ""),
+        );
+        setHidden("fbp", cookie("_fbp"));
+        setHidden("landing_page", window.location.href);
+        setHidden("referrer", document.referrer);
+      }
+
+      capture();
+
+      function resetSubmitButton() {
+        window.clearTimeout(responseTimeout);
+        submitButton.disabled = false;
+        submitButton.classList.remove("is-loading");
+        form.classList.remove("is-loading");
+        loadingOverlay.hidden = true;
+        document.body.classList.remove("is-form-loading");
+        submitLabel.textContent = "मेरा Order Book करें";
+      }
+
+      nameInput.addEventListener("input", () => {
+        nameInput.value = nameInput.value
+          .replace(/[^A-Za-z\u0900-\u097F\u0A80-\u0AFF ]/g, "")
+          .replace(/\s{2,}/g, " ")
+          .replace(/^\s+/, "");
+        errorMessage.hidden = true;
+      });
+
+      phoneInput.addEventListener("input", () => {
+        let value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+        if (value && !/^[6-9]/.test(value)) value = value.slice(1);
+        phoneInput.value = value;
+        errorMessage.hidden = true;
+      });
+
+      pinInput.addEventListener("input", () => {
+        pinInput.value = pinInput.value.replace(/\D/g, "").slice(0, 6);
+        errorMessage.hidden = true;
+      });
+
+      function validName(value) {
+        return /^[A-Za-z\u0900-\u097F\u0A80-\u0AFF]+(?: [A-Za-z\u0900-\u097F\u0A80-\u0AFF]+)*$/.test(
+          value.trim(),
+        );
+      }
+
+      function validPhone(value) {
+        return /^[6-9][0-9]{9}$/.test(value);
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        errorMessage.hidden = true;
+        statusMessage.textContent = "";
+
+        const nameOk = validName(nameInput.value);
+        const phoneOk = validPhone(phoneInput.value);
+        const addressOk = true;
+        const pinOk = true;
+        if (
+          !nameOk ||
+          !phoneOk ||
+          !addressOk ||
+          !pinOk ||
+          !form.reportValidity()
+        ) {
+          errorMessage.textContent = !nameOk
+            ? "कृपया अपना नाम दर्ज करें।"
+            : "कृपया 6 से 9 से शुरू होने वाला 10 अंकों का मोबाइल नंबर दर्ज करें।";
+          errorMessage.hidden = false;
+          (!nameOk
+            ? nameInput
+            : !phoneOk
+              ? phoneInput
+              : !addressOk
+                ? nameInput
+                : nameInput
+          ).focus();
+          return;
+        }
+
+        if (
+          !/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec(?:\?.*)?$/.test(
+            GOOGLE_APPS_SCRIPT_URL,
+          )
+        ) {
+          statusMessage.textContent =
+            "Order submission configure नहीं है। Google Apps Script Web App URL जोड़ने के बाद फिर कोशिश करें।";
+          return;
+        }
+
+        pendingRequestId =
+          window.crypto?.randomUUID?.() ||
+          `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        capture();
+        form.elements.namedItem("request_id").value = pendingRequestId;
+        form.action = GOOGLE_APPS_SCRIPT_URL;
+        form.classList.add("is-loading");
+        loadingOverlay.hidden = false;
+        document.body.classList.add("is-form-loading");
+        submitButton.disabled = true;
+        submitButton.classList.add("is-loading");
+        submitLabel.textContent = "कृपया प्रतीक्षा करें…";
+        statusMessage.textContent =
+          "आपका order सुरक्षित रूप से भेजा जा रहा है…";
+        const thankYouUrl = new URL("thankyou.html", window.location.href);
+        UTM_KEYS.forEach((key) => {
+          const value = form.elements.namedItem(key).value;
+          if (value) thankYouUrl.searchParams.set(key, value);
+        });
+        if (typeof window.fbq === "function") {
+          window.fbq(
+            "track",
+            "Lead",
+            { content_name: "EyeCare Drop" },
+            { eventID: pendingRequestId },
+          );
+        }
+        responseTimeout = window.setTimeout(() => {
+          resetSubmitButton();
+          statusMessage.textContent =
+            "अभी confirmation नहीं मिला। दोबारा भेजने से पहले order status जाँच लें।";
+        }, 20000);
+        HTMLFormElement.prototype.submit.call(form);
+        window.setTimeout(() => {
+          window.clearTimeout(responseTimeout);
+          window.location.assign(thankYouUrl.href);
+        }, 1000);
+      });
+
+      window.addEventListener("message", (event) => {
+        const result = event.data;
+        if (
+          result?.type !== "dermocare-order-result" ||
+          !pendingRequestId ||
+          result.requestId !== pendingRequestId
+        )
+          return;
+
+        resetSubmitButton();
+        if (!result.ok) {
+          statusMessage.textContent =
+            result.message ||
+            "Order save नहीं हो सका। कृपया कुछ देर बाद फिर कोशिश करें।";
+        }
+      });
+
+      document.querySelectorAll(".review-avatar").forEach((image) => {
+        image.addEventListener(
+          "error",
+          () => {
+            image.hidden = true;
+          },
+          { once: true },
+        );
+      });
+
+      const qualitySection = document.querySelector(".quality");
+      const orderSection = document.querySelector("#order");
+      if (qualitySection && orderSection) qualitySection.after(orderSection);
+      const offerSection = document.querySelector(".offer");
+      if (offerSection && orderSection) offerSection.after(orderSection);
+
+      const timerEnd = Date.now() + 15 * 60 * 1000;
+      const updateOfferTimer = () => {
+        const remaining = Math.max(0, timerEnd - Date.now());
+        const totalSeconds = Math.floor(remaining / 1000);
+        document.querySelector("#offer-hours").textContent = "00";
+        document.querySelector("#offer-minutes").textContent = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
+        document.querySelector("#offer-seconds").textContent = String(totalSeconds % 60).padStart(2, "0");
+        if (remaining > 0) window.setTimeout(updateOfferTimer, 1000);
+      };
+      updateOfferTimer();
+
+      const stickyCta = document.querySelector("#sticky-cta");
+      const stickyBlockers = new Set();
+      let painSectionVisible = false;
+      const stickyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.target.id === "pain") {
+              if (entry.isIntersecting) painSectionVisible = true;
+              return;
+            }
+
+            if (entry.isIntersecting) {
+              stickyBlockers.add(entry.target);
+            } else {
+              stickyBlockers.delete(entry.target);
+            }
+          });
+          stickyCta.hidden = !painSectionVisible || stickyBlockers.size > 0;
+        },
+        { threshold: 0.01 },
+      );
+
+      document
+        .querySelectorAll("#pain, #top, #order, .disclaimer")
+        .forEach((section) => {
+          stickyObserver.observe(section);
+        });
+    </script>
+  </body>
+</html>

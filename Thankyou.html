@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="theme-color" content="#F2F6FF" />
+    <title>Order Received | EyeCare Drop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg-main: #F2F6FF;
+        --text-main: #142D55;
+        --highlight: #2879E3;
+        --highlight-hover: #1B62BF;
+        --highlight-dim: rgba(40, 121, 227, 0.12);
+        --card-bg: #FFFFFF;
+        --card-subtle: #E8F0FE;
+        --text-muted: #536B8E;
+        --border-soft: rgba(40, 121, 227, 0.18);
+        --white: #FFFFFF;
+        --font: "Halant", "Noto Serif Devanagari", serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        min-height: 100%;
+      }
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 28px 14px;
+        background: linear-gradient(145deg, #eaf2ff 0%, #f8fbff 58%, #dceaff 100%);
+        color: var(--text-main);
+        font:
+          18px/1.55 var(--font);
+      }
+      main {
+        position: relative;
+        width: min(100%, 450px);
+        min-height: auto;
+        overflow: hidden;
+        padding: 22px 20px 24px;
+        background: var(--card-bg);
+        border: 0;
+        border-radius: 24px;
+        box-shadow: 0 20px 55px rgba(20, 45, 85, 0.14);
+        text-align: center;
+      }
+      main:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: 0;
+        left: 0;
+        border-radius: 24px 24px 0 0;
+        background: var(--highlight);
+        pointer-events: none;
+      }
+      .topline {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #edf2f9;
+      }
+      .wordmark {
+        color: var(--text-main);
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+      .wordmark span {
+        color: var(--highlight);
+      }
+      .badge {
+        color: var(--highlight);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        background: #eef5ff;
+        padding: 5px 9px;
+        border-radius: 7px;
+      }
+      .eyebrow {
+        position: relative;
+        margin: 28px 0 5px;
+        color: var(--highlight);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+      h1 {
+        position: relative;
+        margin: 0 0 7px;
+        color: var(--text-main);
+        font-size: clamp(34px, 9vw, 43px);
+        line-height: 1.18;
+      }
+      .intro {
+        position: relative;
+        margin: 0 auto 21px;
+        max-width: 330px;
+        color: var(--text-muted);
+        font-size: 18px;
+      }
+      .product-card {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: 220px;
+        margin: 0 0 18px;
+        overflow: hidden;
+        border: 1px solid var(--border-soft);
+        border-radius: 16px;
+        background: #f6f9ff;
+        box-shadow: none;
+      }
+      .product-card:before,
+      .product-card:after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(40, 121, 227, 0.08);
+        border-radius: 50%;
+      }
+      .product-card:before {
+        width: 190px;
+        height: 190px;
+      }
+      .product-card:after {
+        width: 145px;
+        height: 145px;
+        border-color: rgba(20, 45, 85, 0.1);
+      }
+      .product {
+        position: relative;
+        z-index: 1;
+        width: min(100%, 220px);
+        height: 220px;
+        object-fit: contain;
+        padding: 8px;
+        filter: drop-shadow(0 14px 20px rgba(20, 45, 85, 0.18));
+        transition: transform 0.35s ease;
+      }
+      .product-card:hover .product {
+        transform: scale(1.06) rotate(-2deg);
+      }
+      .product-label {
+        position: absolute;
+        z-index: 2;
+        right: 14px;
+        bottom: 14px;
+        padding: 5px 12px;
+        border: 1px solid var(--white);
+        border-radius: 99px;
+        background: var(--highlight);
+        color: var(--white);
+        font-size: 12px;
+        font-weight: 700;
+        box-shadow: 0 4px 12px rgba(40, 121, 227, 0.35);
+      }
+      .success {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 18px;
+        padding: 13px 14px;
+        border: 1px solid var(--border-soft);
+        border-radius: 12px;
+        background: var(--card-bg);
+        box-shadow: 0 4px 14px rgba(20, 45, 85, 0.05);
+        text-align: left;
+      }
+      .check {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--highlight);
+        color: var(--white);
+        box-shadow: 0 4px 12px rgba(40, 121, 227, 0.3);
+      }
+      .check svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        stroke-width: 2.5;
+        fill: none;
+      }
+      .success strong {
+        display: block;
+        color: var(--text-main);
+        font-size: 17px;
+      }
+      .success span {
+        display: block;
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 1.3;
+      }
+      .next {
+        margin: 0 0 20px;
+        color: var(--text-main);
+        font-size: 17px;
+      }
+      .order-ref {
+        margin: 0 auto 18px;
+        display: inline-block;
+        padding: 6px 14px;
+        background: var(--card-subtle);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        color: var(--highlight);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 11px 18px;
+        border-radius: 12px;
+        background: var(--highlight);
+        color: var(--white);
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 6px 20px rgba(40, 121, 227, 0.28);
+        transition: 0.2s ease;
+      }
+      .button:hover {
+        transform: translateY(-2px);
+        background: var(--highlight-hover);
+        color: var(--white);
+        box-shadow: 0 8px 24px rgba(40, 121, 227, 0.35);
+      }
+      @media (max-width: 380px) {
+        main {
+          min-height: 660px;
+          padding-inline: 15px;
+        }
+        .product-card {
+          min-height: 245px;
+        }
+        .product {
+          width: 195px;
+          height: 195px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="topline">
+        <div class="wordmark">EyeCare <span>Drop</span></div>
+        <div class="badge">ORDER RECEIVED</div>
+      </div>
+      <p class="eyebrow">आपका order सफलतापूर्वक दर्ज हुआ</p>
+      <h1>धन्यवाद!</h1>
+      <p class="intro">आपकी skin-care journey अब शुरू हो गई है।</p>
+      <div class="product-card">
+        <img
+          class="product"
+          src="Image/product.avif"
+          alt="EyeCare Drop"
+        /><span class="product-label">EYECARE DROP</span>
+      </div>
+      <div class="success">
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg>
+        </div>
+        <div>
+          <strong>Request received</strong
+          ><span>हमारी team confirmation के लिए आपसे संपर्क करेगी।</span>
+        </div>
+      </div>
+      <p class="next">
+        कृपया अपना phone चालू रखें ताकि order confirmation आसानी से हो सके।
+      </p>
+      <p class="order-ref" id="order-ref" hidden></p>
+      <a class="button" href="index.html">EyeCare Drop पर वापस जाएँ</a>
+    </main>
+    <script>
+      const orderId = new URLSearchParams(window.location.search).get(
+        "order_id",
+      );
+      if (orderId) {
+        const reference = document.querySelector("#order-ref");
+        reference.textContent = `Order reference: ${orderId}`;
+        reference.hidden = false;
+      }
+    </script>
+  </body>
+</html>
