@@ -2530,8 +2530,8 @@
               <use href="#icon-gift"></use></svg
             >🎁 Combo Pack Special Offer
           </p>
-          <h2 id="offer-title">₹2500 <em>₹2250 Only</em></h2>
-          <p class="offer-subtitle">Limited Time Offer — Get 10% OFF!</p>
+          <h2 id="offer-title">10% OFF</h2>
+          <p class="offer-subtitle">Limited Time Offer</p>
           <div class="offer-timer" aria-label="Offer ends in">
             <span><b id="offer-hours">00</b><small>HOURS</small></span>
             <span><b id="offer-minutes">15</b><small>MINUTES</small></span>
@@ -3273,32 +3273,23 @@
       updateOfferTimer();
 
       const stickyCta = document.querySelector("#sticky-cta");
-      const stickyBlockers = new Set();
-      let painSectionVisible = false;
+      let hiddenSectionVisible = false;
       const stickyObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.target.id === "pain") {
-              if (entry.isIntersecting) painSectionVisible = true;
-              return;
-            }
-
-            if (entry.isIntersecting) {
-              stickyBlockers.add(entry.target);
-            } else {
-              stickyBlockers.delete(entry.target);
+            if (entry.target.id === "order" || entry.target.id === "top") {
+              hiddenSectionVisible = entry.isIntersecting;
             }
           });
-          stickyCta.hidden = !painSectionVisible || stickyBlockers.size > 0;
+          stickyCta.hidden = hiddenSectionVisible;
         },
         { threshold: 0.01 },
       );
 
-      document
-        .querySelectorAll("#pain, #top, #order, .disclaimer")
-        .forEach((section) => {
-          stickyObserver.observe(section);
-        });
+      stickyCta.hidden = false;
+      if (orderSection) stickyObserver.observe(orderSection);
+      const bannerSection = document.querySelector("#top");
+      if (bannerSection) stickyObserver.observe(bannerSection);
     </script>
   </body>
 </html>
