@@ -651,7 +651,6 @@
       }
 
       .product-intro-point::before {
-        content: "";
         position: absolute;
         top: 9px;
         left: 50%;
@@ -667,10 +666,21 @@
         font-weight: 800;
       }
 
-      .product-intro-point:nth-child(1)::before { content: "01"; }
-      .product-intro-point:nth-child(2)::before { content: "02"; }
-      .product-intro-point:nth-child(3)::before { content: "03"; }
-      .product-intro-point:nth-child(4)::before { content: "04"; }
+      .product-intro-point .point-number {
+        position: absolute;
+        top: 9px;
+        left: 50%;
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 20px;
+        transform: translateX(-50%);
+        border-radius: 999px;
+        background: var(--highlight);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+      }
 
       .product-intro-point:nth-child(even) {
         transform: none;
@@ -1953,7 +1963,8 @@
       }
 
       .disclaimer {
-        padding: 18px 14px 16px;
+        /* Keep the policy navigation clear of the fixed checkout bar. */
+        padding: 18px 14px 104px;
         background: #e4edfc;
         border-top: 1px solid var(--border-soft);
         color: var(--text-main);
@@ -1969,6 +1980,9 @@
       }
 
       .policy-links {
+        position: relative;
+        z-index: 1;
+        display: block;
         margin-top: 10px;
         padding-top: 10px;
         border-top: 1px solid var(--border-soft);
@@ -1979,11 +1993,12 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 1px 5px;
+        gap: 4px 7px;
       }
 
       .policy-link {
-        padding: 3px 1px;
+        display: inline-block;
+        padding: 5px 2px;
         border: 0;
         background: transparent;
         color: var(--highlight);
@@ -2123,13 +2138,12 @@
 
       .sticky-offer span {
         color: var(--text-main);
-        font-size: 0;
+        font-size: 14px;
         font-weight: 700;
       }
 
       .sticky-offer span::before {
-        content: "Free Delivery · COD";
-        font-size: 13px;
+        content: none;
       }
 
       .sticky-button {
@@ -2154,11 +2168,6 @@
       }
 
       .sticky-button {
-        font-size: 0;
-      }
-
-      .sticky-button::before {
-        content: "Order Now";
         font-size: 15.5px;
       }
 
@@ -2237,7 +2246,7 @@
         }
 
         .sticky-offer span {
-          font-size: 12px;
+          font-size: 13px;
         }
       }
 
@@ -2398,10 +2407,10 @@
           <div class="product-intro-badge">Daily<br />Care</div>
         </div>
         <div class="product-intro-points" aria-label="Product highlights">
-          <div class="product-intro-point">7 हर्ब्स का मिश्रण</div>
-          <div class="product-intro-point">10ml ड्रॉप्स पैक</div>
-          <div class="product-intro-point">हर्बल आई केयर फॉर्मूला</div>
-          <div class="product-intro-point">आसान उपयोग</div>
+          <div class="product-intro-point"><span class="point-number">01</span>7 हर्ब्स का मिश्रण</div>
+          <div class="product-intro-point"><span class="point-number">02</span>10ml ड्रॉप्स पैक</div>
+          <div class="product-intro-point"><span class="point-number">03</span>हर्बल आई केयर फॉर्मूला</div>
+          <div class="product-intro-point"><span class="point-number">04</span>आसान उपयोग</div>
         </div>
       </section>
 
